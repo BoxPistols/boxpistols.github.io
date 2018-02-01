@@ -6,10 +6,53 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>BoxPistols</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.js"></script>
 </head>
 <body>
 <h1>Hello BoxPistols</h1>
 
+<script>
+
+    "use strict";
+
+    // 宣言
+    var myBox;
+
+    // Object
+    function myBox() {
+        this.w = 100;
+        this.h = 100;
+        this.d = 100;
+    }
+
+    function setup() {
+        //  宣言
+        var gui;
+
+        createCanvas(400, 300, WEBGL);
+        // インスタンス
+        myBox = new myBox();
+
+        gui = new dat.GUI();
+        gui.add(myBox, "w").step(10).min(50).max(200);
+        gui.add(myBox, "h", 50, 200, 10);
+        gui.add(myBox, "d", 10, 300);
+    }
+
+    // 描画
+    function draw() {
+        background(10, 10, 10);
+        rotateX(frameCount * 0.01);
+        rotateY(frameCount * 0.01);
+        noFill();
+        stroke(255);
+        box(myBox.w, myBox.h, myBox.d);
+    }
+
+
+</script>
+
 </body>
-</html>
+

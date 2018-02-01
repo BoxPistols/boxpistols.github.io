@@ -1,4 +1,12 @@
 body {
-  background-color: #900; }
+  background-color: #000; }
+
+h1 {
+  color: white;
+  text-align: center; }
+
+canvas {
+  width: 100% !important;
+  height: 100% !important; }
 
 /*# sourceMappingURL=style.css.map */
