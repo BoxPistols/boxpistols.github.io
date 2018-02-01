@@ -11,33 +11,22 @@ body {
   color: white;
   font-family: 'Playfair Display',"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   font-size: 16px;
+
+  background: linear-gradient(-45deg, rgba(60, 54, 255, 0.8), rgba(255, 137, 28, 0.8)) fixed, url(https://git.io/vNFD0) fixed;
+  background-size: cover;
+
 }
-
-
+a{
+  color: #9fc4c6;
+  text-decoration: none;
+  &:hover{
+    opacity: .8;
+  }
+}
 .wrap {
-  //position: absolute;
-  top: 200px;
-  //left: calc(50% - 140px);
+  padding: 2rem;
   text-align: center;
   font-size: 3rem;
-  //-webkit-transform: translate(-50%, -50%);
-  //transform: translate(-50%, -50%)
-}
-.cont{
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  transform: translate(0%, 0%);
-  font-size: 2.6rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .inner{
-    max-width: 600px;
-    width: auto;
-    height: 100%;
-    margin: auto;
-  }
 }
 
 h1,h2,h3{
@@ -48,11 +37,15 @@ h1,h2,h3{
 h1{
   color: white;
   text-align: center;
-  font-size: 6rem;
+  font-size: 3rem;
   font-weight: 100;
 }
+h2,h3 {
+  font-size: 2.4rem;
+}
 h4{
-  border-bottom: 1px solid white;
+  font-size: 2.4rem;
+  margin: .5rem 0;
 }
 canvas {
   position: relative;
@@ -60,4 +53,37 @@ canvas {
   margin: 20px auto;
   width: 200px !important;
   height: 200px !important;
+}
+.dg.ac{
+  opacity: .8;
+}
+
+canvas#defaultCanvas0 {
+  opacity: .7;
+  border-radius: 100%;
+  border: 2px solid #fff;
+}
+
+
+.cont{
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  transform: translate(0%, 0%);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  .inner{
+    //display: block;
+    max-width: 400px;
+    width: 98%;
+    text-align: center;
+    height: 100%;
+    margin: auto;
+    padding: 1rem;
+    font-size: 2rem;
+    background-color:rgba(200,200,200,.2);
+  }
 }
