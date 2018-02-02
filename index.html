@@ -11,57 +11,18 @@
 
   <link rel="stylesheet" href="css/style.css">
   <title>BoxPistols</title>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.js"></script>
+
 </head>
 <body>
 
 <div class="wrap">
   <small class="head">BoxPistols / by Asagiri Design</small>
-  <h1>Hello World!</h1>
+  <h1>Hello World !</h1>
+  <small class="title">I am</small>
   <h2>Front-End Engineer</h2>
   <h3>UI/UX Designer</h3>
 </div>
 
-<script>
-
-  "use strict";
-
-  // 宣言
-  var myBox;
-
-  // Object
-  function myBox() {
-    this.w = 80;
-    this.h = 80;
-    this.d = 80;
-  }
-
-  function setup() {
-    //  宣言
-    var gui;
-
-    createCanvas(200, 200, WEBGL);
-    // インスタンス
-    myBox = new myBox();
-
-    gui = new dat.GUI();
-    gui.add(myBox, "w").step(10).min(50).max(100);
-    gui.add(myBox, "h", 50, 100, 10);
-    gui.add(myBox, "d", 10, 100);
-  }
-
-  // 描画
-  function draw() {
-    background(60, 120, 200, 0);
-    rotateX(frameCount * 0.02);
-    rotateY(frameCount * 0.02);
-    noFill();
-    stroke(255);
-    box(myBox.w, myBox.h, myBox.d);
-  }
-
-</script>
 
 <div class="cont">
   <div class="inner">
@@ -71,5 +32,10 @@
     <p><a href="https://codepen.io/agdg" target="_blank">CodePen</a></p>
   </div>
 </div>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.js"></script>
+<script type="text/javascript" src="js/gui.js"></script>
 
 </body>
