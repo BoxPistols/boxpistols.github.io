@@ -13,9 +13,9 @@
 <body>
 
 <div class="wrap">
-  <smal>BoxPistols</smal>
+  <small class="head">BoxPistols</small>
   <h1>Hello</h1>
-  <h2>I am FrontEnd Engineer</h2>
+  <h2>Front-End Engineer</h2>
   <h3>UI/UX Designer</h3>
 </div>
 
@@ -28,9 +28,9 @@
 
   // Object
   function myBox() {
-    this.w = 100;
-    this.h = 100;
-    this.d = 100;
+    this.w = 80;
+    this.h = 80;
+    this.d = 80;
   }
 
   function setup() {
@@ -49,9 +49,9 @@
 
   // 描画
   function draw() {
-    background(60, 120, 200);
-    rotateX(frameCount * 0.01);
-    rotateY(frameCount * 0.01);
+    background(60, 120, 200, 0);
+    rotateX(frameCount * 0.02);
+    rotateY(frameCount * 0.02);
     noFill();
     stroke(255);
     box(myBox.w, myBox.h, myBox.d);
@@ -62,8 +62,8 @@
 <div class="cont">
   <div class="inner">
     <!-- /.inner -->
-    <h4>Works</h4>
-    <p><a href="https://github.com/BoxPistols" target="_blank">My GitHub</a></p>
+    <h4>My Works</h4>
+    <p><a href="https://github.com/BoxPistols" target="_blank">GitHub</a></p>
     <p><a href="https://codepen.io/agdg" target="_blank">CodePen</a></p>
   </div>
 </div>

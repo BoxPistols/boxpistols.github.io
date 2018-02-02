@@ -6,12 +6,11 @@ html{
 *{
   box-sizing: border-box;
 }
+
 body {
-  background-color: #000;
   color: white;
   font-family: 'Playfair Display',"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   font-size: 16px;
-
   background: linear-gradient(-45deg, rgba(60, 54, 255, 0.8), rgba(255, 137, 28, 0.8)) fixed, url(https://git.io/vNFD0) fixed;
   background-size: cover;
 
@@ -27,18 +26,24 @@ a{
   padding: 2rem;
   text-align: center;
   font-size: 3rem;
+  text-shadow: 1px 1px 2px #000;
 }
 
+small.head{
+  font-size: 2.4rem;
+  opacity: .9;
+}
 h1,h2,h3{
   font-weight: 100;
   line-height: 1.2;
   margin: .5rem;
+  opacity: .9;
 }
 h1{
   color: white;
   text-align: center;
   font-size: 3rem;
-  font-weight: 100;
+  font-weight: 200;
 }
 h2,h3 {
   font-size: 2.4rem;
@@ -46,6 +51,9 @@ h2,h3 {
 h4{
   font-size: 2.4rem;
   margin: .5rem 0;
+  border-bottom: 1px solid #fff;
+  padding: 0 0 1rem;
+  font-weight: 100;
 }
 canvas {
   position: relative;
@@ -62,6 +70,7 @@ canvas#defaultCanvas0 {
   opacity: .7;
   border-radius: 100%;
   border: 2px solid #fff;
+  box-shadow: 2px 3px 4px #424;
 }
 
 
@@ -75,15 +84,58 @@ canvas#defaultCanvas0 {
   justify-content: center;
   align-items: center;
   z-index: 2;
+  text-shadow: 1px 1px 2px #000;
   .inner{
     //display: block;
     max-width: 400px;
     width: 98%;
     text-align: center;
     height: 100%;
-    margin: auto;
+    margin-left: -1.6rem;
+
     padding: 1rem;
     font-size: 2rem;
     background-color:rgba(200,200,200,.2);
+    border: 2px solid white;
   }
+}
+
+.dg {
+  &.ac {
+    position: fixed;
+    //top: auto !important;
+    bottom: 110px;
+    left: 0;
+    right: -15px !important;
+    height: 0;
+    z-index: 3;
+    opacity: .6;
+    .property-name {
+      cursor: default;
+      float: left;
+      clear: left;
+      width: 2rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &.a {
+    float: right;
+    margin-right: 15px;
+    overflow-y: visible;
+    max-width: 150px;
+    box-shadow: -1px 1px 0px #fff;
+  }
+  .cr.number {
+    border-left: none!important;
+  }
+}
+
+.dg.main .close-button.close-bottom {
+  max-width: 150px!important;
+  background: none!important;
+}
+.dg .c .slider-fg {
+  background: rgba(255, 137, 28, 0.8)!important;
+  max-width: 100%;
 }
